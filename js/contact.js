@@ -4,9 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
     
     if (contactForm) {
-        // Set up FormSubmit endpoint
-        contactForm.setAttribute('action', 'https://formsubmit.co/digitallymeweb@gmail.com');
-        contactForm.setAttribute('method', 'POST');
         
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();

@@ -124,10 +124,10 @@
     margin: 0 auto;
 }
 
-/* Form error message */
-.form-error {
-    background: rgba(255, 56, 96, 0.05);
-    border: 1px solid rgba(255, 56, 96, 0.2);
+/* Form notification message */
+.form-error, .form-notification {
+    background: rgba(0, 229, 255, 0.05);
+    border: 1px solid rgba(0, 229, 255, 0.2);
     border-radius: var(--radius-md);
     padding: 1.2rem var(--spacing-sm);
     margin-bottom: var(--spacing-sm);
@@ -140,9 +140,9 @@
     font-weight: 500;
 }
 
-.form-error i {
+.form-error i, .form-notification i {
     font-size: 1.8rem;
-    color: #ff3860;
+    color: var(--primary);
     margin-right: var(--spacing-xs);
 }
 

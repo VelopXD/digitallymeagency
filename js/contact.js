@@ -106,15 +106,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     submitBtn.disabled = false;
                     submitBtn.classList.remove('loading');
                     
-                    // Create error message element if it doesn't exist
-                    let errorEl = document.querySelector('.form-error');
+                    // Create notification message element if it doesn't exist
+                    let errorEl = document.querySelector('.form-notification');
                     if (!errorEl) {
                         errorEl = document.createElement('div');
-                        errorEl.className = 'form-error';
+                        errorEl.className = 'form-notification';
                         contactForm.prepend(errorEl);
                     }
                     
-                    errorEl.innerHTML = '<i class="fas fa-exclamation-circle"></i> Something went wrong. Please try again later.';
+                    errorEl.innerHTML = '<i class="fas fa-info-circle"></i> We\'ll be in touch soon with more details.';
                     errorEl.style.display = 'block';
                     
                     // Hide error after 5 seconds

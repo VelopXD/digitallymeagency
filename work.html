@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Work | Digitallyme</title>
+    <meta name="description" content="Explore our portfolio of award-winning digital projects including websites, applications, branding, and UI/UX design work.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-mode">
+    <!-- Custom Cursor -->
+    <div class="cursor-outline"></div>
+    <div class="cursor-ring"></div>
+    
+    <!-- Page loader removed for improved performance -->
+
+    <!-- Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo">
+                    <a href="index.html" class="logo-link">Digitallyme</a>
+                </div>
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                        <li class="nav-item"><a href="work.html" class="nav-link active">Work</a></li>
+                        <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="theme-toggle" aria-label="Toggle dark/light mode">
+                        <i class="fas fa-moon dark-icon"></i>
+                        <i class="fas fa-sun light-icon"></i>
+                    </button>
+                    <button class="menu-toggle" aria-label="Toggle mobile menu">
+                        <span class="menu-line"></span>
+                        <span class="menu-line"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-inner">
+            <ul class="mobile-nav-list">
+                <li class="mobile-nav-item"><a href="index.html" class="mobile-nav-link">Home</a></li>
+                <li class="mobile-nav-item"><a href="about.html" class="mobile-nav-link">About</a></li>
+                <li class="mobile-nav-item"><a href="services.html" class="mobile-nav-link">Services</a></li>
+                <li class="mobile-nav-item"><a href="work.html" class="mobile-nav-link active">Work</a></li>
+                <li class="mobile-nav-item"><a href="blog.html" class="mobile-nav-link">Blog</a></li>
+                <li class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+            </ul>
+            <div class="mobile-contact">
+                <a href="mailto:hello@digitallyme.com" class="mobile-contact-link">hello@digitallyme.com</a>
+                <div class="mobile-social">
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="work-hero parallax" id="top">
+        <div class="container">
+            <div class="work-hero-inner">
+                <div class="work-hero-content">
+                    <h1 class="work-hero-title">
+                        <span class="text-reveal">Our</span>
+                        <span class="text-reveal highlight">Work</span>
+                    </h1>
+                    <div class="work-hero-subtitle">
+                        <p class="text-reveal-delay">Explore our portfolio of award-winning digital projects. Each project represents our commitment to excellence, innovation, and delivering exceptional results for our clients.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Filter -->
+    <section class="portfolio-filter">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="web">Web Design</button>
+                <button class="filter-btn" data-filter="ui">UI/UX</button>
+                <button class="filter-btn" data-filter="branding">Branding</button>
+                <button class="filter-btn" data-filter="development">Development</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="portfolio-grid">
+        <div class="container">
+            <div class="portfolio-items">
+                <!-- Project 1 -->
+                <div class="portfolio-item" data-category="web branding">
+                    <div class="portfolio-item-inner">
+                        <div class="portfolio-image">
+                            <img src="img/project-1.jpg" alt="Fusion Tech Website">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-overlay-content">
+                                    <h3 class="portfolio-title">Fusion Tech</h3>
+                                    <p class="portfolio-category">Web Design, Branding</p>
+                                    <a href="#project-1" class="btn btn-outline portfolio-view">View Project</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="portfolio-item" data-category="ui development">
+                    <div class="portfolio-item-inner">
+                        <div class="portfolio-image">
+                            <img src="img/project-2.jpg" alt="Eco App UI Design">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-overlay-content">
+                                    <h3 class="portfolio-title">Eco App</h3>
+                                    <p class="portfolio-category">UI/UX, Development</p>
+                                    <a href="#project-2" class="btn btn-outline portfolio-view">View Project</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="portfolio-item" data-category="branding">
+                    <div class="portfolio-item-inner">
+                        <div class="portfolio-image">
+                            <img src="img/project-3.jpg" alt="Lumina Brand Identity">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-overlay-content">
+                                    <h3 class="portfolio-title">Lumina</h3>
+                                    <p class="portfolio-category">Brand Identity</p>
+                                    <a href="#project-3" class="btn btn-outline portfolio-view">View Project</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="portfolio-item" data-category="web development">
+                    <div class="portfolio-item-inner">
+                        <div class="portfolio-image">
+                            <img src="img/project-4.jpg" alt="Quantum E-commerce Platform">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-overlay-content">
+                                    <h3 class="portfolio-title">Quantum</h3>
+                                    <p class="portfolio-category">Web Design, Development</p>
+                                    <a href="#project-4" class="btn btn-outline portfolio-view">View Project</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="portfolio-item" data-category="ui">
+                    <div class="portfolio-item-inner">
+                        <div class="portfolio-image">
+                            <img src="img/project-5.jpg" alt="Pulse Dashboard UI">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-overlay-content">
+                                    <h3 class="portfolio-title">Pulse Dashboard</h3>
+                                    <p class="portfolio-category">UI/UX Design</p>
+                                    <a href="#project-5" class="btn btn-outline portfolio-view">View Project</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="portfolio-item" data-category="branding web">
+                    <div class="portfolio-item-inner">
+                        <div class="portfolio-image">
+                            <img src="img/project-6.jpg" alt="Horizon Travel Website">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-overlay-content">
+                                    <h3 class="portfolio-title">Horizon Travel</h3>
+                                    <p class="portfolio-category">Branding, Web Design</p>
+                                    <a href="#project-6" class="btn btn-outline portfolio-view">View Project</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Details Modals -->
+    <!-- Project 1 Modal -->
+    <div class="project-modal" id="project-1">
+        <div class="project-modal-inner">
+            <div class="project-modal-header">
+                <h2 class="project-modal-title">Fusion Tech</h2>
+                <button class="project-modal-close">&times;</button>
+            </div>
+            <div class="project-modal-content">
+                <div class="project-modal-gallery">
+                    <img src="img/project-1-detail-1.jpg" alt="Fusion Tech Website Homepage">
+                    <img src="img/project-1-detail-2.jpg" alt="Fusion Tech Website Services Page">
+                    <img src="img/project-1-detail-3.jpg" alt="Fusion Tech Website Mobile View">
+                </div>
+                <div class="project-modal-info">
+                    <div class="project-modal-description">
+                        <h3>Project Overview</h3>
+                        <p>Fusion Tech needed a complete website redesign to reflect their innovative technology solutions and improve user engagement. We created a modern, responsive website with intuitive navigation and compelling visuals that showcase their services and expertise.</p>
+                        <h3>Challenge</h3>
+                        <p>The main challenge was to create a website that appeals to both technical and non-technical audiences while effectively communicating complex technology solutions in an accessible way.</p>
+                        <h3>Solution</h3>
+                        <p>We developed a clean, minimalist design with a strong visual hierarchy that guides users through the content. The website features interactive elements, smooth animations, and a user-friendly interface that enhances the overall user experience.</p>
+                    </div>
+                    <div class="project-modal-details">
+                        <div class="project-detail">
+                            <h4>Client</h4>
+                            <p>Fusion Tech Inc.</p>
+                        </div>
+                        <div class="project-detail">
+                            <h4>Services</h4>
+                            <p>Web Design, Branding, Development</p>
+                        </div>
+                        <div class="project-detail">
+                            <h4>Year</h4>
+                            <p>2023</p>
+                        </div>
+                        <div class="project-detail">
+                            <h4>Visit Website</h4>
+                            <p><a href="#" class="project-link">www.fusiontech.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 2 Modal -->
+    <div class="project-modal" id="project-2">
+        <div class="project-modal-inner">
+            <div class="project-modal-header">
+                <h2 class="project-modal-title">Eco App</h2>
+                <button class="project-modal-close">&times;</button>
+            </div>
+            <div class="project-modal-content">
+                <div class="project-modal-gallery">
+                    <img src="img/project-2-detail-1.jpg" alt="Eco App UI Design">
+                    <img src="img/project-2-detail-2.jpg" alt="Eco App Features">
+                    <img src="img/project-2-detail-3.jpg" alt="Eco App Mobile Screens">
+                </div>
+                <div class="project-modal-info">
+                    <div class="project-modal-description">
+                        <h3>Project Overview</h3>
+                        <p>Eco App is a mobile application designed to help users track and reduce their carbon footprint. We created an intuitive UI/UX design and developed the application with a focus on user engagement and environmental impact.</p>
+                        <h3>Challenge</h3>
+                        <p>The main challenge was to create a user-friendly interface that simplifies complex environmental data and motivates users to make sustainable choices in their daily lives.</p>
+                        <h3>Solution</h3>
+                        <p>We developed a clean, visually appealing design with intuitive navigation and gamification elements that encourage user engagement. The app features personalized recommendations, progress tracking, and social sharing capabilities.</p>
+                    </div>
+                    <div class="project-modal-details">
+                        <div class="project-detail">
+                            <h4>Client</h4>
+                            <p>GreenTech Solutions</p>
+                        </div>
+                        <div class="project-detail">
+                            <h4>Services</h4>
+                            <p>UI/UX Design, Mobile Development</p>
+                        </div>
+                        <div class="project-detail">
+                            <h4>Year</h4>
+                            <p>2023</p>
+                        </div>
+                        <div class="project-detail">
+                            <h4>Download App</h4>
+                            <p><a href="#" class="project-link">App Store</a> | <a href="#" class="project-link">Google Play</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 3 Modal -->
+    <div class="project-modal" id="project-3">
+        <div class="project-modal-inner">
+            <div class="project-modal-header">
+                <h2 class="project-modal-title">Lumina</h2>
+                <button class="project-modal-close">&times;</button>
+            </div>
+            <div class="project-modal-content">
+                <div class="project-modal-gallery">
+                    <img src="img/project-3-detail-1.jpg" alt="Lumina Brand Logo">
+                    <img src="img/project-3-detail-2.jpg" alt="Lumina Brand Guidelines">
+                    <img src="img/project-3-detail-3.jpg" alt="Lumina Brand Applications">
+                </div>
+                <div class="project-modal-info">
+                    <div class="project-modal-description">
+                        <h3>Project Overview</h3>
+                        <p>Lumina, a premium lighting design company, needed a complete brand identity that reflects their innovative and elegant approach to lighting solutions. We created a sophisticated brand identity that captures their essence and appeals to their target audience.</p>
+                        <h3>Challenge</h3>
+                        <p>The challenge was to create a brand identity that conveys both the technical expertise and artistic vision of Lumina, while standing out in a competitive market.</p>
+                        <h3>Solution</h3>
+                        <p>We developed a minimalist yet distinctive brand identity with a focus on light and shadow. The brand system includes a versatile logo, a refined color palette, custom typography, and a comprehensive set of brand guidelines for consistent application across all touchpoints.</p>
+                    </div>
+                    <div class="project-modal-details">
+                        <div class="project-detail">
+                            <h4>Client</h4>
+                            <p>Lumina Lighting Design</p>
+                        </div>
+                        <div class="project-detail">
+                            <h4>Services</h4>
+                            <p>Brand Identity, Logo Design, Brand Guidelines</p>
+                        </div>
+                        <div class="project-detail">
+                            <h4>Year</h4>
+                            <p>2022</p>
+                        </div>
+                        <div class="project-detail">
+                            <h4>Visit Website</h4>
+                            <p><a href="#" class="project-link">www.luminadesign.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 4 Modal -->
+    <div class="project-modal" id="project-4">
+        <div class="project-modal-inner">
+            <div class="project-modal-header">
+                <h2 class="project-modal-title">Quantum</h2>
+                <button class="project-modal-close">&times;</button>
+            </div>
+            <div class="project-modal-content">
+                <div class="project-modal-gallery">
+                    <img src="img/project-4-detail-1.jpg" alt="Quantum E-commerce Homepage">
+                    <img src="img/project-4-detail-2.jpg" alt="Quantum Product Page">
+                    <img src="img/project-4-detail-3.jpg" alt="Quantum Mobile Experience">
+                </div>
+                <div class="project-modal-info">
+                    <div class="project-modal-description">
+                        <h3>Project Overview</h3>
+                        <p>Quantum needed a high-performance e-commerce platform to showcase and sell their premium tech products. We designed and developed a custom e-commerce solution that enhances the shopping experience and drives conversions.</p>
+                        <h3>Challenge</h3>
+                        <p>The main challenge was to create a seamless shopping experience that highlights the premium nature of the products while ensuring fast loading times and smooth checkout process.</p>
+                        <h3>Solution</h3>
+                        <p>We developed a custom e-commerce platform with a focus on product presentation, user experience, and performance. The website features high-quality product imagery, detailed product information, personalized recommendations, and a streamlined checkout process.</p>
+                    </div>
+                    <div class="project-modal-details">
+                        <div class="project-detail">
+                            <h4>Client</h4>
+                            <p>Quantum Electronics</p>
+                        </div>
+                        <div class="project-detail">
+                            <h4>Services</h4>
+                            <p>Web Design, E-commerce Development, UX Optimization</p>
+                        </div>
+                        <div class="project-detail">
+                            <h4>Year</h4>
+                            <p>2023</p>
+                        </div>
+                        <div class="project-detail">
+                            <h4>Visit Website</h4>
+                            <p><a href="#" class="project-link">www.quantumstore.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 5 Modal -->
+    <div class="project-modal" id="project-5">
+        <div class="project-modal-inner">
+            <div class="project-modal-header">
+                <h2 class="project-modal-title">Pulse Dashboard</h2>
+                <button class="project-modal-close">&times;</button>
+            </div>
+            <div class="project-modal-content">
+                <div class="project-modal-gallery">
+                    <img src="img/project-5-detail-1.jpg" alt="Pulse Dashboard Overview">
+                    <img src="img/project-5-detail-2.jpg" alt="Pulse Dashboard Analytics">
+                    <img src="img/project-5-detail-3.jpg" alt="Pulse Dashboard Mobile View">
+                </div>
+                <div class="project-modal-info">
+                    <div class="project-modal-description">
+                        <h3>Project Overview</h3>
+                        <p>Pulse Dashboard is a data visualization and analytics platform designed for marketing professionals. We created an intuitive UI design that makes complex data accessible and actionable for users of all technical levels.</p>
+                        <h3>Challenge</h3>
+                        <p>The challenge was to design a dashboard that presents complex data in a clear, visually appealing way while ensuring the interface remains intuitive and user-friendly.</p>
+                        <h3>Solution</h3>
+                        <p>We developed a clean, modern UI design with customizable widgets, interactive charts, and data visualization tools. The dashboard features a responsive layout, dark/light mode options, and personalized user settings to enhance the user experience.</p>
+                    </div>
+                    <div class="project-modal-details">
+                        <div class="project-detail">
+                            <h4>Client</h4>
+                            <p>DataViz Solutions</p>
+                        </div>
+                        <div class="project-detail">
+                            <h4>Services</h4>
+                            <p>UI/UX Design, Dashboard Design, Data Visualization</p>
+                        </div>
+                        <div class="project-detail">
+                            <h4>Year</h4>
+                            <p>2022</p>
+                        </div>
+                        <div class="project-detail">
+                            <h4>Visit Website</h4>
+                            <p><a href="#" class="project-link">www.pulsedashboard.io</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 6 Modal -->
+    <div class="project-modal" id="project-6">
+        <div class="project-modal-inner">
+            <div class="project-modal-header">
+                <h2 class="project-modal-title">Horizon Travel</h2>
+                <button class="project-modal-close">&times;</button>
+            </div>
+            <div class="project-modal-content">
+                <div class="project-modal-gallery">
+                    <img src="img/project-6-detail-1.jpg" alt="Horizon Travel Website Homepage">
+                    <img src="img/project-6-detail-2.jpg" alt="Horizon Travel Destination Page">
+                    <img src="img/project-6-detail-3.jpg" alt="Horizon Travel Mobile Experience">
+                </div>
+                <div class="project-modal-info">
+                    <div class="project-modal-description">
+                        <h3>Project Overview</h3>
+                        <p>Horizon Travel needed a complete brand refresh and website redesign to appeal to adventure-seeking millennials. We created a vibrant brand identity and an immersive website that inspires travel and simplifies the booking process.</p>
+                        <h3>Challenge</h3>
+                        <p>The challenge was to create a brand and website that stands out in the crowded travel industry while providing a seamless user experience for researching destinations and booking trips.</p>
+                        <h3>Solution</h3>
+                        <p>We developed a bold, adventurous brand identity and a content-rich website with immersive destination pages, interactive maps, user-generated content, and a streamlined booking system. The design emphasizes stunning imagery and authentic experiences to inspire travelers.</p>
+                    </div>
+                    <div class="project-modal-details">
+                        <div class="project-detail">
+                            <h4>Client</h4>
+                            <p>Horizon Travel Adventures</p>
+                        </div>
+                        <div class="project-detail">
+                            <h4>Services</h4>
+                            <p>Branding, Web Design, Content Strategy</p>
+                        </div>
+                        <div class="project-detail">
+                            <h4>Year</h4>
+                            <p>2023</p>
+                        </div>
+                        <div class="project-detail">
+                            <h4>Visit Website</h4>
+                            <p><a href="#" class="project-link">www.horizonadventures.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Client Testimonials</h2>
+                <p class="section-subtitle">What our clients say about working with us and the results we've delivered.</p>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial-slide fade-in">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                            <p>Digitallyme transformed our online presence with a stunning website that perfectly captures our brand identity. Their attention to detail and commitment to excellence exceeded our expectations.</p>
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="testimonial-author-image">
+                                <img src="img/testimonial-1.jpg" alt="Sarah Johnson">
+                            </div>
+                            <div class="testimonial-author-info">
+                                <h4>Sarah Johnson</h4>
+                                <p>CEO, Fusion Tech</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-slide fade-in">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                            <p>Working with Digitallyme was a game-changer for our business. Their strategic approach to UI/UX design significantly improved our user engagement and conversion rates. Highly recommended!</p>
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="testimonial-author-image">
+                                <img src="img/testimonial-2.jpg" alt="Michael Chen">
+                            </div>
+                            <div class="testimonial-author-info">
+                                <h4>Michael Chen</h4>
+                                <p>Product Manager, Eco App</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-slide fade-in">
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                            <p>The team at Digitallyme created a brand identity that perfectly captures our company's vision and values. Their creativity, professionalism, and collaborative approach made the entire process seamless.</p>
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="testimonial-author-image">
+                                <img src="img/testimonial-3.jpg" alt="Emma Rodriguez">
+                            </div>
+                            <div class="testimonial-author-info">
+                                <h4>Emma Rodriguez</h4>
+                                <p>Marketing Director, Lumina</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-inner">
+                <div class="cta-content">
+                    <h2 class="cta-title">Ready to start your project?</h2>
+                    <p class="cta-text">Let's create something amazing together.</p>
+                </div>
+                <div class="cta-action">
+                    <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <a href="index.html" class="logo-link">Digitallyme</a>
+                    <p class="footer-tagline">Your Digital Space Reimagined</p>
+                </div>
+                <div class="footer-nav">
+                    <div class="footer-nav-column">
+                        <h3 class="footer-nav-title">Pages</h3>
+                        <ul class="footer-nav-list">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="work.html">Work</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-nav-column">
+                        <h3 class="footer-nav-title">Services</h3>
+                        <ul class="footer-nav-list">
+                            <li><a href="services.html#web">Web Design</a></li>
+                            <li><a href="services.html#ui">UI/UX Design</a></li>
+                            <li><a href="services.html#development">Development</a></li>
+                            <li><a href="services.html#branding">Brand Identity</a></li>
+                            <li><a href="services.html#strategy">Digital Strategy</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-nav-column">
+                        <h3 class="footer-nav-title">Contact</h3>
+                        <ul class="footer-contact-list">
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:hello@digitallyme.com">hello@digitallyme.com</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+1234567890">+1 (234) 567-890</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>123 Digital Avenue, Tech City, 10001</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-social">
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
+                    <a href="#" aria-label="Behance"><i class="fab fa-behance"></i></a>
+                </div>
+                
+                <div class="footer-copyright">
+                    <p>&copy; 2024 Digitallyme. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- JavaScript Files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/portfolio.js"></script>
+</body>
+</html>

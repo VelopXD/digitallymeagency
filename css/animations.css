@@ -1,0 +1,485 @@
+/* ===== ANIMATIONS.CSS ===== */
+/* This file contains all the animations and transitions for the website */
+
+/* ===== TEXT REVEAL ANIMATIONS ===== */
+.text-reveal {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    transform-origin: left;
+}
+
+.text-reveal .char {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1), 
+                opacity 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.text-reveal {
+    --before-scale: 0;
+    --after-scale: 0;
+    --before-origin: left;
+    --after-origin: right;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Disable the before/after elements that were causing the black screen */
+.text-reveal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    transform: scaleX(0); /* Force to 0 to make it invisible */
+    transform-origin: var(--before-origin);
+    z-index: 1;
+    opacity: 0; /* Make it fully transparent */
+    transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.text-reveal::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-alt);
+    transform: scaleX(0); /* Force to 0 to make it invisible */
+    transform-origin: var(--after-origin);
+    z-index: 2;
+    opacity: 0; /* Make it fully transparent */
+    transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.text-reveal-delay::before,
+.text-reveal-delay::after {
+    transition-delay: 0.3s;
+}
+
+@keyframes text-reveal-before {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes text-reveal-after {
+    0% {
+        transform: scaleX(1);
+    }
+    100% {
+        transform: scaleX(0);
+    }
+}
+
+/* ===== SCROLL ANIMATIONS ===== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fade-in-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.scale-in {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scale-in.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Staggered animations for lists */
+.stagger-item {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.stagger-item.visible {
+    animation: stagger-fade-in 0.5s ease forwards;
+}
+
+@keyframes stagger-fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== HOVER ANIMATIONS ===== */
+/* Button hover effect */
+.btn-hover-effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-hover-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.7s ease;
+}
+
+.btn-hover-effect:hover::before {
+    left: 100%;
+}
+
+/* Card hover effect */
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Image hover zoom effect */
+.img-hover-zoom {
+    overflow: hidden;
+}
+
+.img-hover-zoom img {
+    transition: transform 0.5s ease;
+}
+
+.img-hover-zoom:hover img {
+    transform: scale(1.1);
+}
+
+/* Link hover underline effect */
+.link-hover-underline {
+    position: relative;
+    display: inline-block;
+}
+
+.link-hover-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    transition: width 0.3s ease;
+}
+
+.link-hover-underline:hover::after {
+    width: 100%;
+}
+
+/* ===== PARALLAX EFFECTS ===== */
+.parallax {
+    position: relative;
+    overflow: hidden;
+}
+
+.parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    transform: translateY(0);
+    will-change: transform;
+}
+
+/* ===== LOADING ANIMATIONS ===== */
+/* Spinner animation */
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: var(--primary);
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Pulse animation */
+.pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* ===== SECTION TRANSITIONS ===== */
+.section-transition {
+    position: relative;
+    overflow: hidden;
+}
+
+.section-transition::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--bg), transparent);
+    opacity: 0.8;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* ===== TYPING ANIMATION ===== */
+.typing-animation {
+    display: inline-block;
+    position: relative;
+}
+
+.typing-animation::after {
+    content: '|';
+    position: absolute;
+    right: -5px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+/* ===== COUNTER ANIMATION ===== */
+.counter-animation {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.counter-animation.visible {
+    animation: count-up 2s forwards;
+}
+
+@keyframes count-up {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== GRADIENT TEXT ANIMATION ===== */
+.gradient-text {
+    background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent), var(--primary));
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradient-shift 8s ease infinite;
+}
+
+@keyframes gradient-shift {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+/* ===== GLOW EFFECT ===== */
+.glow {
+    position: relative;
+}
+
+.glow::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    border-radius: inherit;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    filter: blur(15px);
+}
+
+.glow:hover::before {
+    opacity: 0.7;
+}
+
+/* ===== SHAKE ANIMATION ===== */
+.shake:hover {
+    animation: shake 0.5s ease;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    20%, 60% {
+        transform: translateX(-5px);
+    }
+    40%, 80% {
+        transform: translateX(5px);
+    }
+}
+
+/* ===== FLOAT ANIMATION ===== */
+.float {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* ===== REVEAL ON SCROLL ANIMATIONS ===== */
+.reveal-on-scroll {
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.reveal-on-scroll.from-bottom {
+    transform: translateY(50px);
+}
+
+.reveal-on-scroll.from-left {
+    transform: translateX(-50px);
+}
+
+.reveal-on-scroll.from-right {
+    transform: translateX(50px);
+}
+
+.reveal-on-scroll.from-top {
+    transform: translateY(-50px);
+}
+
+.reveal-on-scroll.zoom-in {
+    transform: scale(0.9);
+}
+
+.reveal-on-scroll.visible {
+    opacity: 1;
+    transform: translate(0) scale(1);
+}
+
+/* ===== CLIP PATH ANIMATIONS ===== */
+.clip-path-reveal {
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path 1s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.clip-path-reveal.visible {
+    clip-path: inset(0 0 0 0);
+}
+
+/* ===== 3D TILT EFFECT ===== */
+.tilt-effect {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    transition: transform 0.1s ease;
+}
+
+/* ===== BLUR EFFECT ===== */
+.blur-in {
+    filter: blur(10px);
+    opacity: 0;
+    transition: filter 0.8s ease, opacity 0.8s ease;
+}
+
+.blur-in.visible {
+    filter: blur(0);
+    opacity: 1;
+}
+
+/* ===== SPLIT TEXT ANIMATION ===== */
+.split-text-char {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.split-text-char.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== MAGNETIC EFFECT ===== */
+.magnetic {
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* ===== SCROLL PROGRESS INDICATOR ===== */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    z-index: var(--z-fixed);
+    transition: width 0.1s ease;
+}

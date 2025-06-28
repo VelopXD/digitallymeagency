@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Digitallyme</title>
+    <meta name="description" content="Explore our blog for insights on web design, UI/UX, development trends, digital strategy, and creative inspiration.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-mode">
+    <!-- Custom Cursor -->
+    <div class="cursor-outline"></div>
+    <div class="cursor-ring"></div>
+    
+    <!-- Page loader removed for improved performance -->
+
+    <!-- Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo">
+                    <a href="index.html" class="logo-link">Digitallyme</a>
+                </div>
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                        <li class="nav-item"><a href="work.html" class="nav-link">Work</a></li>
+                        <li class="nav-item"><a href="blog.html" class="nav-link active">Blog</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="theme-toggle" aria-label="Toggle dark/light mode">
+                        <i class="fas fa-moon dark-icon"></i>
+                        <i class="fas fa-sun light-icon"></i>
+                    </button>
+                    <button class="menu-toggle" aria-label="Toggle mobile menu">
+                        <span class="menu-line"></span>
+                        <span class="menu-line"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-inner">
+            <ul class="mobile-nav-list">
+                <li class="mobile-nav-item"><a href="index.html" class="mobile-nav-link">Home</a></li>
+                <li class="mobile-nav-item"><a href="about.html" class="mobile-nav-link">About</a></li>
+                <li class="mobile-nav-item"><a href="services.html" class="mobile-nav-link">Services</a></li>
+                <li class="mobile-nav-item"><a href="work.html" class="mobile-nav-link">Work</a></li>
+                <li class="mobile-nav-item"><a href="blog.html" class="mobile-nav-link active">Blog</a></li>
+                <li class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+            </ul>
+            <div class="mobile-contact">
+                <a href="mailto:hello@digitallyme.com" class="mobile-contact-link">hello@digitallyme.com</a>
+                <div class="mobile-social">
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="blog-hero parallax" id="top">
+        <div class="container">
+            <div class="blog-hero-inner">
+                <div class="blog-hero-content">
+                    <h1 class="blog-hero-title">
+                        <span class="text-reveal">Our</span>
+                        <span class="text-reveal highlight">Blog</span>
+                    </h1>
+                    <div class="blog-hero-subtitle">
+                        <p class="text-reveal-delay">Insights, trends, and inspiration from our team of digital experts. Explore our latest articles on web design, UI/UX, development, and digital strategy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Categories -->
+    <section class="blog-categories">
+        <div class="container">
+            <div class="category-buttons">
+                <button class="category-btn active" data-category="all">All Posts</button>
+                <button class="category-btn" data-category="design">Design</button>
+                <button class="category-btn" data-category="development">Development</button>
+                <button class="category-btn" data-category="strategy">Strategy</button>
+                <button class="category-btn" data-category="trends">Trends</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Post -->
+    <section class="featured-post">
+        <div class="container">
+            <div class="featured-post-inner fade-in">
+                <div class="featured-post-image">
+                    <img src="img/blog-featured.jpg" alt="The Future of Web Design: Trends to Watch in 2024">
+                    <div class="featured-post-tag">Featured</div>
+                </div>
+                <div class="featured-post-content">
+                    <div class="post-meta">
+                        <span class="post-category">Design</span>
+                        <span class="post-date">June 15, 2024</span>
+                    </div>
+                    <h2 class="featured-post-title">The Future of Web Design: Trends to Watch in 2024</h2>
+                    <p class="featured-post-excerpt">Explore the cutting-edge design trends that are shaping the digital landscape in 2024. From immersive 3D experiences to adaptive interfaces, discover how these innovations are transforming user experiences and setting new standards for web design.</p>
+                    <a href="blog-single.html" class="btn btn-primary">Read Article</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Grid -->
+    <section class="blog-grid">
+        <div class="container">
+            <div class="blog-posts">
+                <!-- Blog Post 1 -->
+                <article class="blog-post fade-in" data-category="development">
+                    <div class="blog-post-inner">
+                        <div class="blog-post-image">
+                            <img src="img/blog-1.jpg" alt="Optimizing Website Performance: Best Practices for 2024">
+                            <div class="post-meta">
+                                <span class="post-category">Development</span>
+                                <span class="post-date">June 10, 2024</span>
+                            </div>
+                        </div>
+                        <div class="blog-post-content">
+                            <h3 class="blog-post-title">Optimizing Website Performance: Best Practices for 2024</h3>
+                            <p class="blog-post-excerpt">Learn how to improve your website's speed, responsiveness, and overall performance with these essential optimization techniques.</p>
+                            <a href="blog-single.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Blog Post 2 -->
+                <article class="blog-post fade-in" data-category="design">
+                    <div class="blog-post-inner">
+                        <div class="blog-post-image">
+                            <img src="img/blog-2.jpg" alt="Creating Accessible Designs: Why Inclusivity Matters">
+                            <div class="post-meta">
+                                <span class="post-category">Design</span>
+                                <span class="post-date">June 5, 2024</span>
+                            </div>
+                        </div>
+                        <div class="blog-post-content">
+                            <h3 class="blog-post-title">Creating Accessible Designs: Why Inclusivity Matters</h3>
+                            <p class="blog-post-excerpt">Discover the importance of designing for accessibility and how inclusive design practices can benefit all users, not just those with disabilities.</p>
+                            <a href="blog-single.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Blog Post 3 -->
+                <article class="blog-post fade-in" data-category="strategy">
+                    <div class="blog-post-inner">
+                        <div class="blog-post-image">
+                            <img src="img/blog-3.jpg" alt="Digital Marketing Strategies for Small Businesses">
+                            <div class="post-meta">
+                                <span class="post-category">Strategy</span>
+                                <span class="post-date">May 28, 2024</span>
+                            </div>
+                        </div>
+                        <div class="blog-post-content">
+                            <h3 class="blog-post-title">Digital Marketing Strategies for Small Businesses</h3>
+                            <p class="blog-post-excerpt">Effective digital marketing strategies that small businesses can implement to increase their online presence and drive growth.</p>
+                            <a href="blog-single.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Blog Post 4 -->
+                <article class="blog-post fade-in" data-category="development">
+                    <div class="blog-post-inner">
+                        <div class="blog-post-image">
+                            <img src="img/blog-4.jpg" alt="The Rise of Headless CMS: Benefits and Implementation">
+                            <div class="post-meta">
+                                <span class="post-category">Development</span>
+                                <span class="post-date">May 20, 2024</span>
+                            </div>
+                        </div>
+                        <div class="blog-post-content">
+                            <h3 class="blog-post-title">The Rise of Headless CMS: Benefits and Implementation</h3>
+                            <p class="blog-post-excerpt">Explore the advantages of headless CMS architecture and how it can provide greater flexibility and performance for your digital projects.</p>
+                            <a href="blog-single.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Blog Post 5 -->
+                <article class="blog-post fade-in" data-category="trends">
+                    <div class="blog-post-inner">
+                        <div class="blog-post-image">
+                            <img src="img/blog-5.jpg" alt="AI in Design: How Machine Learning is Changing the Creative Process">
+                            <div class="post-meta">
+                                <span class="post-category">Trends</span>
+                                <span class="post-date">May 15, 2024</span>
+                            </div>
+                        </div>
+                        <div class="blog-post-content">
+                            <h3 class="blog-post-title">AI in Design: How Machine Learning is Changing the Creative Process</h3>
+                            <p class="blog-post-excerpt">An in-depth look at how artificial intelligence and machine learning are transforming design workflows and enabling new creative possibilities.</p>
+                            <a href="blog-single.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Blog Post 6 -->
+                <article class="blog-post fade-in" data-category="design">
+                    <div class="blog-post-inner">
+                        <div class="blog-post-image">
+                            <img src="img/blog-6.jpg" alt="Color Theory in Digital Design: Creating Effective Color Schemes">
+                            <div class="post-meta">
+                                <span class="post-category">Design</span>
+                                <span class="post-date">May 8, 2024</span>
+                            </div>
+                        </div>
+                        <div class="blog-post-content">
+                            <h3 class="blog-post-title">Color Theory in Digital Design: Creating Effective Color Schemes</h3>
+                            <p class="blog-post-excerpt">Learn the principles of color theory and how to apply them to create harmonious, effective color schemes for your digital projects.</p>
+                            <a href="blog-single.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <!-- Pagination -->
+            <div class="pagination">
+                <button class="pagination-btn active">1</button>
+                <button class="pagination-btn">2</button>
+                <button class="pagination-btn">3</button>
+                <button class="pagination-btn pagination-next">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-inner">
+                <div class="newsletter-content">
+                    <h2 class="newsletter-title">Subscribe to Our Newsletter</h2>
+                    <p class="newsletter-text">Stay updated with our latest articles, insights, and industry trends. No spam, just valuable content delivered straight to your inbox.</p>
+                </div>
+                <form class="newsletter-form">
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Enter your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </div>
+                    <div class="form-consent">
+                        <input type="checkbox" id="consent" required>
+                        <label for="consent">I agree to receive emails from Digitallyme and can unsubscribe at any time.</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <a href="index.html" class="logo-link">Digitallyme</a>
+                    <p class="footer-tagline">Your Digital Space Reimagined</p>
+                </div>
+                <div class="footer-nav">
+                    <div class="footer-nav-column">
+                        <h3 class="footer-nav-title">Pages</h3>
+                        <ul class="footer-nav-list">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="work.html">Work</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-nav-column">
+                        <h3 class="footer-nav-title">Services</h3>
+                        <ul class="footer-nav-list">
+                            <li><a href="services.html#web">Web Design</a></li>
+                            <li><a href="services.html#ui">UI/UX Design</a></li>
+                            <li><a href="services.html#development">Development</a></li>
+                            <li><a href="services.html#branding">Brand Identity</a></li>
+                            <li><a href="services.html#strategy">Digital Strategy</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-nav-column">
+                        <h3 class="footer-nav-title">Contact</h3>
+                        <ul class="footer-contact-list">
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:hello@digitallyme.com">hello@digitallyme.com</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+1234567890">+1 (234) 567-890</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>123 Digital Avenue, Tech City, 10001</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-social">
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
+                    <a href="#" aria-label="Behance"><i class="fab fa-behance"></i></a>
+                </div>
+                
+                <div class="footer-copyright">
+                    <p>&copy; 2024 Digitallyme. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- JavaScript Files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/blog.js"></script>
+</body>
+</html>

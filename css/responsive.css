@@ -1,0 +1,376 @@
+/* ===== RESPONSIVE.CSS ===== */
+/* This file contains all the responsive styles for the website */
+
+/* ===== MEDIA QUERIES ===== */
+
+/* Extra Large Devices (Large Desktops) */
+@media (max-width: 1400px) {
+    html {
+        font-size: 60%;
+    }
+}
+
+/* Large Devices (Desktops) */
+@media (max-width: 1200px) {
+    html {
+        font-size: 58%;
+    }
+
+    .hero-title {
+        font-size: 6.5rem;
+    }
+
+    .section-title {
+        font-size: 4.8rem;
+    }
+
+    .process-steps {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+/* Medium Devices (Tablets) */
+@media (max-width: 992px) {
+    html {
+        font-size: 56%;
+    }
+
+    .hero-title {
+        font-size: 5.5rem;
+    }
+
+    .section-title {
+        font-size: 4.2rem;
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .hero {
+        height: auto;
+        min-height: 600px;
+        padding: 15rem 0 10rem;
+    }
+    
+    /* Adjust padding for first sections on non-home pages for tablets */
+    body:not(.home-page) section:first-of-type {
+        padding-top: calc(var(--spacing-lg) + 6rem);
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .hero-cta .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .contact-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info {
+        padding-right: 0;
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .cta-title {
+        font-size: 3.8rem;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .footer-nav {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        text-align: center;
+    }
+}
+
+/* Small Devices (Landscape Phones) */
+@media (max-width: 768px) {
+    /* Adjust padding for first sections on non-home pages for mobile */
+    body:not(.home-page) section:first-of-type {
+        padding-top: calc(var(--spacing-lg) + 5rem);
+    }
+    html {
+        font-size: 54%;
+    }
+
+    .hero-title {
+        font-size: 4.8rem;
+    }
+
+    .section-title {
+        font-size: 3.6rem;
+    }
+
+    .testimonial-quote {
+        font-size: 2rem;
+    }
+
+    .process-step {
+        flex-direction: column;
+    }
+
+    .step-number {
+        margin-bottom: var(--spacing-xs);
+    }
+
+    .services-grid,
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cta-title {
+        font-size: 3.2rem;
+    }
+
+    .back-to-top {
+        width: 4.5rem;
+        height: 4.5rem;
+        font-size: 1.8rem;
+        right: 2rem;
+        bottom: 2rem;
+    }
+
+    /* Hide cursor animation on mobile */
+    .cursor-dot,
+    .cursor-outline,
+    .cursor-ring {
+        display: none !important;
+    }
+    
+    /* Show default cursor on mobile */
+    body {
+        cursor: auto !important;
+    }
+}
+
+/* Extra Small Devices (Portrait Phones) */
+@media (max-width: 576px) {
+    html {
+        font-size: 52%;
+    }
+
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+
+    .hero-title {
+        font-size: 4.2rem;
+    }
+
+    .section-title {
+        font-size: 3.2rem;
+    }
+
+    .testimonial-controls {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-inner {
+        padding: var(--spacing-md);
+    }
+
+    .cta-title {
+        font-size: 2.8rem;
+    }
+
+    .contact-form-wrapper {
+        padding: var(--spacing-md);
+    }
+
+    .faq-question h3 {
+        font-size: 1.8rem;
+    }
+
+    .mobile-nav-link {
+        font-size: 2.8rem;
+    }
+}
+
+/* ===== RESPONSIVE UTILITIES ===== */
+
+/* Hide on mobile */
+@media (max-width: 768px) {
+    .hide-on-mobile {
+        display: none !important;
+    }
+}
+
+/* Hide on tablet */
+@media (max-width: 992px) and (min-width: 769px) {
+    .hide-on-tablet {
+        display: none !important;
+    }
+}
+
+/* Hide on desktop */
+@media (min-width: 993px) {
+    .hide-on-desktop {
+        display: none !important;
+    }
+}
+
+/* Show on mobile only */
+.show-on-mobile {
+    display: none !important;
+}
+
+@media (max-width: 768px) {
+    .show-on-mobile {
+        display: block !important;
+    }
+}
+
+/* Show on tablet only */
+.show-on-tablet {
+    display: none !important;
+}
+
+@media (max-width: 992px) and (min-width: 769px) {
+    .show-on-tablet {
+        display: block !important;
+    }
+}
+
+/* ===== RESPONSIVE LAYOUT HELPERS ===== */
+
+/* Responsive flex direction */
+@media (max-width: 768px) {
+    .flex-column-mobile {
+        flex-direction: column !important;
+    }
+}
+
+/* Responsive text alignment */
+@media (max-width: 768px) {
+    .text-center-mobile {
+        text-align: center !important;
+    }
+}
+
+/* Responsive spacing */
+@media (max-width: 768px) {
+    .mb-mobile-md {
+        margin-bottom: var(--spacing-md) !important;
+    }
+
+    .mt-mobile-md {
+        margin-top: var(--spacing-md) !important;
+    }
+
+    .py-mobile-md {
+        padding-top: var(--spacing-md) !important;
+        padding-bottom: var(--spacing-md) !important;
+    }
+}
+
+/* ===== RESPONSIVE GRID ADJUSTMENTS ===== */
+
+/* Responsive grid columns */
+.grid-1-col-mobile {
+    display: grid;
+    gap: var(--spacing-md);
+}
+
+@media (max-width: 768px) {
+    .grid-1-col-mobile {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Responsive order */
+@media (max-width: 768px) {
+    .order-mobile-1 {
+        order: 1 !important;
+    }
+
+    .order-mobile-2 {
+        order: 2 !important;
+    }
+}
+
+/* ===== RESPONSIVE FONT SIZES ===== */
+@media (max-width: 768px) {
+    .text-smaller-mobile {
+        font-size: 90% !important;
+    }
+
+    .text-larger-mobile {
+        font-size: 110% !important;
+    }
+}
+
+/* ===== RESPONSIVE IMAGES ===== */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Make images full width on mobile */
+@media (max-width: 768px) {
+    .img-full-mobile {
+        width: 100% !important;
+    }
+}
+
+/* ===== RESPONSIVE NAVIGATION ===== */
+@media (max-width: 992px) {
+    .header {
+        padding: 1.5rem 0;
+    }
+
+    .header.scrolled {
+        padding: 1rem 0;
+    }
+
+    .logo {
+        font-size: 2.2rem;
+    }
+}
+
+/* ===== RESPONSIVE BUTTONS ===== */
+@media (max-width: 576px) {
+    .btn {
+        padding: 1rem 2.5rem;
+        font-size: 1.5rem;
+    }
+}
+
+/* ===== RESPONSIVE FORMS ===== */
+@media (max-width: 576px) {
+    .form-group input,
+    .form-group textarea {
+        padding: 1rem;
+    }
+}

@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Digitallyme</title>
+    <meta name="description" content="Explore our comprehensive digital services including web design, UI/UX, development, branding, and digital strategy.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-mode">
+    <!-- Custom Cursor -->
+    <div class="cursor-outline"></div>
+    <div class="cursor-ring"></div>
+    
+    <!-- Page loader removed for improved performance -->
+
+    <!-- Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo">
+                    <a href="index.html" class="logo-link">Digitallyme</a>
+                </div>
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="services.html" class="nav-link active">Services</a></li>
+                        <li class="nav-item"><a href="work.html" class="nav-link">Work</a></li>
+                        <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="theme-toggle" aria-label="Toggle dark/light mode">
+                        <i class="fas fa-moon dark-icon"></i>
+                        <i class="fas fa-sun light-icon"></i>
+                    </button>
+                    <button class="menu-toggle" aria-label="Toggle mobile menu">
+                        <span class="menu-line"></span>
+                        <span class="menu-line"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-inner">
+            <ul class="mobile-nav-list">
+                <li class="mobile-nav-item"><a href="index.html" class="mobile-nav-link">Home</a></li>
+                <li class="mobile-nav-item"><a href="about.html" class="mobile-nav-link">About</a></li>
+                <li class="mobile-nav-item"><a href="services.html" class="mobile-nav-link active">Services</a></li>
+                <li class="mobile-nav-item"><a href="work.html" class="mobile-nav-link">Work</a></li>
+                <li class="mobile-nav-item"><a href="blog.html" class="mobile-nav-link">Blog</a></li>
+                <li class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+            </ul>
+            <div class="mobile-contact">
+                <a href="mailto:hello@digitallyme.com" class="mobile-contact-link">hello@digitallyme.com</a>
+                <div class="mobile-social">
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="services-hero parallax" id="top">
+        <div class="container">
+            <div class="services-hero-inner">
+                <div class="services-hero-content">
+                    <h1 class="services-hero-title">
+                        <span class="text-reveal">Our</span>
+                        <span class="text-reveal highlight">Services</span>
+                    </h1>
+                    <div class="services-hero-subtitle">
+                        <p class="text-reveal-delay">We offer a comprehensive suite of digital services designed to elevate your brand and drive business growth. From stunning web design to strategic digital marketing, our team delivers exceptional results that exceed expectations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="services-overview">
+        <div class="container">
+            <div class="services-grid">
+                <a href="#web" class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="service-title">Web Design</h3>
+                    <p class="service-description">Beautiful, responsive websites that captivate and convert.</p>
+                </a>
+                <a href="#ui" class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-pencil-ruler"></i>
+                    </div>
+                    <h3 class="service-title">UI/UX Design</h3>
+                    <p class="service-description">Intuitive interfaces and seamless user experiences.</p>
+                </a>
+                <a href="#development" class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="service-title">Development</h3>
+                    <p class="service-description">Robust, scalable solutions built with cutting-edge technology.</p>
+                </a>
+                <a href="#branding" class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3 class="service-title">Brand Identity</h3>
+                    <p class="service-description">Distinctive visual identities that make lasting impressions.</p>
+                </a>
+                <a href="#strategy" class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="service-title">Digital Strategy</h3>
+                    <p class="service-description">Data-driven approaches to achieve your business goals.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Web Design Section -->
+    <section class="service-detail" id="web">
+        <div class="container">
+            <div class="service-detail-inner">
+                <div class="service-detail-content">
+                    <h2 class="section-title">Web Design</h2>
+                    <p class="service-detail-text">Our web design services focus on creating visually stunning, highly functional websites that align with your brand identity and business objectives. We combine aesthetic appeal with strategic thinking to deliver websites that not only look great but also perform exceptionally well.</p>
+                    <ul class="service-features">
+                        <li class="service-feature"><i class="fas fa-check"></i> Responsive design for all devices</li>
+                        <li class="service-feature"><i class="fas fa-check"></i> SEO-optimized structure</li>
+                        <li class="service-feature"><i class="fas fa-check"></i> Fast loading speeds</li>
+                        <li class="service-feature"><i class="fas fa-check"></i> Intuitive navigation</li>
+                        <li class="service-feature"><i class="fas fa-check"></i> Conversion-focused layouts</li>
+                        <li class="service-feature"><i class="fas fa-check"></i> Accessibility compliance</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary">Discuss Your Project</a>
+                </div>
+                <div class="service-detail-image fade-in-right">
+                    <img src="img/web-design.jpg" alt="Web Design" class="rounded-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UI/UX Design Section -->
+    <section class="service-detail alt-bg" id="ui">
+        <div class="container">
+            <div class="service-detail-inner reverse">
+                <div class="service-detail-image fade-in-left">
+                    <img src="img/ui-ux.jpg" alt="UI/UX Design" class="rounded-image">
+                </div>
+                <div class="service-detail-content">
+                    <h2 class="section-title">UI/UX Design</h2>
+                    <p class="service-detail-text">We create intuitive, engaging user interfaces and seamless user experiences that delight your audience and achieve your business goals. Our UI/UX design process is deeply rooted in user research and testing to ensure optimal results.</p>
+                    <ul class="service-features">
+                        <li class="service-feature"><i class="fas fa-check"></i> User research & persona development</li>
+                        <li class="service-feature"><i class="fas fa-check"></i> Information architecture</li>
+                        <li class="service-feature"><i class="fas fa-check"></i> Wireframing & prototyping</li>
+                        <li class="service-feature"><i class="fas fa-check"></i> Usability testing</li>
+                        <li class="service-feature"><i class="fas fa-check"></i> Interaction design</li>
+                        <li class="service-feature"><i class="fas fa-check"></i> Visual design systems</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary">Discuss Your Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Development Section -->
+    <section class="service-detail" id="development">
+        <div class="container">
+            <div class="service-detail-inner">
+                <div class="service-detail-content">
+                    <h2 class="section-title">Development</h2>
+                    <p class="service-detail-text">Our development team builds robust, scalable digital solutions using the latest technologies and best practices. We focus on creating clean, efficient code that's easy to maintain and extend as your business grows.</p>
+                    <ul class="service-features">
+                        <li class="service-feature"><i class="fas fa-check"></i> Front-end development</li>
+                        <li class="service-feature"><i class="fas fa-check"></i> Back-end systems</li>
+                        <li class="service-feature"><i class="fas fa-check"></i> E-commerce solutions</li>
+                        <li class="service-feature"><i class="fas fa-check"></i> Content management systems</li>
+                        <li class="service-feature"><i class="fas fa-check"></i> Custom web applications</li>
+                        <li class="service-feature"><i class="fas fa-check"></i> API integration</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary">Discuss Your Project</a>
+                </div>
+                <div class="service-detail-image fade-in-right">
+                    <img src="img/development.jpg" alt="Development" class="rounded-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Identity Section -->
+    <section class="service-detail alt-bg" id="branding">
+        <div class="container">
+            <div class="service-detail-inner reverse">
+                <div class="service-detail-image fade-in-left">
+                    <img src="img/branding.jpg" alt="Brand Identity" class="rounded-image">
+                </div>
+                <div class="service-detail-content">
+                    <h2 class="section-title">Brand Identity</h2>
+                    <p class="service-detail-text">We craft distinctive brand identities that communicate your values and resonate with your target audience. Our branding services help you stand out in a crowded marketplace and build lasting connections with customers.</p>
+                    <ul class="service-features">
+                        <li class="service-feature"><i class="fas fa-check"></i> Logo design</li>
+                        <li class="service-feature"><i class="fas fa-check"></i> Brand strategy</li>
+                        <li class="service-feature"><i class="fas fa-check"></i> Visual identity systems</li>
+                        <li class="service-feature"><i class="fas fa-check"></i> Brand guidelines</li>
+                        <li class="service-feature"><i class="fas fa-check"></i> Brand messaging</li>
+                        <li class="service-feature"><i class="fas fa-check"></i> Brand collateral</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary">Discuss Your Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Digital Strategy Section -->
+    <section class="service-detail" id="strategy">
+        <div class="container">
+            <div class="service-detail-inner">
+                <div class="service-detail-content">
+                    <h2 class="section-title">Digital Strategy</h2>
+                    <p class="service-detail-text">Our data-driven digital strategies help you navigate the complex digital landscape and achieve your business objectives. We analyze market trends, competitor activities, and customer behavior to develop effective strategies that drive growth.</p>
+                    <ul class="service-features">
+                        <li class="service-feature"><i class="fas fa-check"></i> Market research & analysis</li>
+                        <li class="service-feature"><i class="fas fa-check"></i> Competitive positioning</li>
+                        <li class="service-feature"><i class="fas fa-check"></i> Digital marketing planning</li>
+                        <li class="service-feature"><i class="fas fa-check"></i> Content strategy</li>
+                        <li class="service-feature"><i class="fas fa-check"></i> SEO & SEM strategies</li>
+                        <li class="service-feature"><i class="fas fa-check"></i> Analytics & performance tracking</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary">Discuss Your Project</a>
+                </div>
+                <div class="service-detail-image fade-in-right">
+                    <img src="img/strategy.jpg" alt="Digital Strategy" class="rounded-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Process</h2>
+                <p class="section-subtitle">We follow a structured, collaborative approach to ensure every project delivers exceptional results. Our process combines strategic thinking with creative execution to bring your vision to life.</p>
+            </div>
+            <div class="process-steps">
+                <div class="process-step fade-in">
+                    <div class="process-step-number">01</div>
+                    <h3 class="process-step-title">Discovery</h3>
+                    <p class="process-step-text">We start by understanding your business, goals, target audience, and competitive landscape through in-depth research and consultation.</p>
+                </div>
+                <div class="process-step fade-in">
+                    <div class="process-step-number">02</div>
+                    <h3 class="process-step-title">Strategy</h3>
+                    <p class="process-step-text">Based on our findings, we develop a comprehensive strategy that outlines the approach, timeline, and deliverables for your project.</p>
+                </div>
+                <div class="process-step fade-in">
+                    <div class="process-step-number">03</div>
+                    <h3 class="process-step-title">Design</h3>
+                    <p class="process-step-text">Our creative team designs visually stunning, user-focused solutions that align with your brand identity and business objectives.</p>
+                </div>
+                <div class="process-step fade-in">
+                    <div class="process-step-number">04</div>
+                    <h3 class="process-step-title">Development</h3>
+                    <p class="process-step-text">We bring the designs to life with clean, efficient code, ensuring optimal performance, security, and scalability.</p>
+                </div>
+                <div class="process-step fade-in">
+                    <div class="process-step-number">05</div>
+                    <h3 class="process-step-title">Testing</h3>
+                    <p class="process-step-text">Rigorous testing across devices and platforms ensures everything works flawlessly before launch.</p>
+                </div>
+                <div class="process-step fade-in">
+                    <div class="process-step-number">06</div>
+                    <h3 class="process-step-title">Launch & Support</h3>
+                    <p class="process-step-text">We handle the deployment process and provide ongoing support to ensure continued success after launch.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-inner">
+                <div class="cta-content">
+                    <h2 class="cta-title">Ready to start your project?</h2>
+                    <p class="cta-text">Let's discuss how our services can help you achieve your business goals.</p>
+                </div>
+                <div class="cta-action">
+                    <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <a href="index.html" class="logo-link">Digitallyme</a>
+                    <p class="footer-tagline">Your Digital Space Reimagined</p>
+                </div>
+                <div class="footer-nav">
+                    <div class="footer-nav-column">
+                        <h3 class="footer-nav-title">Pages</h3>
+                        <ul class="footer-nav-list">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="work.html">Work</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-nav-column">
+                        <h3 class="footer-nav-title">Services</h3>
+                        <ul class="footer-nav-list">
+                            <li><a href="#web">Web Design</a></li>
+                            <li><a href="#ui">UI/UX Design</a></li>
+                            <li><a href="#development">Development</a></li>
+                            <li><a href="#branding">Brand Identity</a></li>
+                            <li><a href="#strategy">Digital Strategy</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-nav-column">
+                        <h3 class="footer-nav-title">Contact</h3>
+                        <ul class="footer-contact-list">
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:hello@digitallyme.com">hello@digitallyme.com</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+1234567890">+1 (234) 567-890</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>123 Digital Avenue, Tech City, 10001</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-social">
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
+                    <a href="#" aria-label="Behance"><i class="fab fa-behance"></i></a>
+                </div>
+                
+                <div class="footer-copyright">
+                    <p>&copy; 2024 Digitallyme. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- JavaScript Files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/navigation-fix.js"></script>
+</body>
+</html>

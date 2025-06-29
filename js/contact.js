@@ -2,16 +2,21 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Get contact form element
     const contactForm = document.getElementById('contactForm');
+    let isSubmitting = false; // Flag to prevent multiple submissions
     
     if (contactForm) {
+        // Clear any existing success/error messages on page load
+        clearFormMessages();
         
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
+            // Prevent multiple submissions
+            if (isSubmitting) return;
+            
             // Get form inputs
             const nameInput = document.getElementById('name');
             const emailInput = document.getElementById('email');
-            const phoneInput = document.getElementById('phone');
             const subjectInput = document.getElementById('subject');
             const messageInput = document.getElementById('message');
             const consentInput = document.getElementById('consent');
@@ -59,6 +64,15 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // If form is valid, submit it to Formspree
             if (isValid) {
+                // Clear any existing messages
+                clearFormMessages();
+                
+                // Set submitting flag
+                isSubmitting = true;
+                
+                // Store the original form structure for later restoration
+                const formOriginal = contactForm.innerHTML;
+                
                 // Show loading state
                 const submitBtn = contactForm.querySelector('button[type="submit"]');
                 const originalBtnText = submitBtn.innerHTML;
@@ -84,17 +98,25 @@ document.addEventListener('DOMContentLoaded', function() {
                     throw new Error('Network response was not ok.');
                 })
                 .then(data => {
-                    // Show success message
-                    const formContent = contactForm.innerHTML;
+                    // Show success message (only once)
                     contactForm.innerHTML = '<div class="form-success"><i class="fas fa-check-circle"></i><h3>Thank you for your message!</h3><p>We\'ve received your inquiry and will get back to you as soon as possible.</p></div>';
                     
                     // Reset form after 5 seconds
                     setTimeout(() => {
-                        contactForm.innerHTML = formContent;
-                        contactForm.reset();
+                        // Restore the original form structure
+                        contactForm.innerHTML = formOriginal;
                         
-                        // Re-attach event listeners
-                        setupFormListeners();
+                        // Reset the form fields
+                        const resetForm = document.getElementById('contactForm');
+                        if (resetForm) {
+                            resetForm.reset();
+                            
+                            // Re-attach event listeners
+                            setupFormListeners();
+                        }
+                        
+                        // Reset submission flag
+                        isSubmitting = false;
                     }, 5000);
                 })
                 .catch(error => {
@@ -103,20 +125,24 @@ document.addEventListener('DOMContentLoaded', function() {
                     submitBtn.disabled = false;
                     submitBtn.classList.remove('loading');
                     
-                    // Create notification message element if it doesn't exist
-                    let errorEl = document.querySelector('.form-notification');
-                    if (!errorEl) {
-                        errorEl = document.createElement('div');
-                        errorEl.className = 'form-notification';
-                        contactForm.prepend(errorEl);
-                    }
+                    // Clear any existing notification messages
+                    clearFormMessages();
                     
-                    errorEl.innerHTML = '<i class="fas fa-info-circle"></i> We\'ll be in touch soon with more details.';
-                    errorEl.style.display = 'block';
+                    // Create notification message element
+                    const errorEl = document.createElement('div');
+                    errorEl.className = 'form-notification';
+                    errorEl.id = 'formNotification';
+                    errorEl.innerHTML = '<i class="fas fa-info-circle"></i> There was an issue sending your message. Please try again later.';
+                    contactForm.prepend(errorEl);
                     
                     // Hide error after 5 seconds
                     setTimeout(() => {
-                        errorEl.style.display = 'none';
+                        if (errorEl && errorEl.parentNode) {
+                            errorEl.parentNode.removeChild(errorEl);
+                        }
+                        
+                        // Reset submission flag
+                        isSubmitting = false;
                     }, 5000);
                 });
             }
@@ -197,5 +223,24 @@ document.addEventListener('DOMContentLoaded', function() {
     function isValidEmail(email) {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
+    }
+    
+    // Function to clear any existing form messages
+    function clearFormMessages() {
+        // Remove any existing notification messages
+        const existingNotifications = document.querySelectorAll('.form-notification');
+        existingNotifications.forEach(notification => {
+            if (notification && notification.parentNode) {
+                notification.parentNode.removeChild(notification);
+            }
+        });
+        
+        // Remove any existing success messages
+        const existingSuccess = document.querySelectorAll('.form-success');
+        existingSuccess.forEach(success => {
+            if (success && success.parentNode) {
+                success.parentNode.removeChild(success);
+            }
+        });
     }
 });
